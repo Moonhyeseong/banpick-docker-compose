@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  nest:
+    image: moonhyeseong/banpick-back:0.0.1
+    ports:
+      - '8080:8080'
+
+  next:
+    image: moonhyeseong/banpick-front:0.0.1
+    depends_on:
+      - nest
+    ports:
+      - '3000:3000'
